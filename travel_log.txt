@@ -1,0 +1,39 @@
+started looping travel steps
+taken step | gold: 0 | exp: 0 | Welcome to SimpleMMO. This game is incredibly simple. Every time you take a step, you will embark on a small adventure that will be displayed in just a few sentences.
+taken step | gold: 0 | exp: 0 | Some adventures will make you laugh. Some will make you cry. Some will make you re-evaluate your life.
+taken step | gold: 0 | exp: 0 | Not all adventures are linked together. They are entirely random! The purpose of the game is for you to sit back, relax and embark on small adventures with the single press of a button.
+taken step | gold: 10 | exp: 5 | While travelling, you can come across gold coins and experience points that can be used to upgrade your character. Check it out! You've just been given some experience points and gold for taking this step. Sweet!
+taken step | gold: 19 | exp: 7 | You can view your level progress by glancing at the purple bar just above this text block. Fill that up to level up!
+taken step | gold: 5 | exp: 8 | You can also find loot, come across rare materials, and encounter dangerous enemies which you can battle.
+taken step | gold: 14 | exp: 5 | Travelling isn't the only thing you can do on SimpleMMO! You can battle enemies in the Battle Arena, complete various quests, join a guild and participate in raids, and so much more!
+taken step | gold: 20 | exp: 7 | The game is played by thousands of players worldwide. You can talk to them on the global chat. Why don't you pop in and say hello?
+taken step | gold: 18 | exp: 8 | If you need help, you can simply ask a question in the support chat or go to the discussion boards. Our community is incredibly friendly!
+taken step | gold: 11 | exp: 6 | Now that we have got the introduction out of the way... your journey awaits. Take another step to get started!
+taken step | gold: 0 | exp: 0 | While passing through a deep forest, a small blue fairy appears, flying around your head. She keeps demanding you listen to her. You sigh. It's gonna be a long day...
+taken step | gold: 0 | exp: 0 | <div><img src='/img/sprites/19.png' class="inline-block"></div> <div class='my-2'>You come across <a href='/user/view/962174' class='font-semibold'> burtonsarah8071 </a> who is travelling right now.</div>
+        <div>
+        <span class="relative z-0 inline-flex shadow-sm rounded-md">
+        <a href='/user/view/962174'>
+            <button type="button" class="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-xs md:text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                View Profile
+            </button>
+        </a>
+        <button onclick="waveToUser(962174,'burtonsarah8071')" type="button" class="-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-xs md:text-sm  font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+            Wave
+        </button>
+        </span>
+        </div>
+taken step | gold: 0 | exp: 2 | <div><div><img src="/img/icons/W_Axe002.png" class="inline-block"></div><div><span class='uncommon-item' onclick='retrieveItem(12290, "63dae6c137fe7")' id='item-id-63dae6c137fe7'>Weak Axe</span></div></div>
+taken step | gold: 0 | exp: 2 | You locate an old abandoned supply depot. It appears to have been out of use for a long time. It looks like the supplies were removed from the depot or it has been looted recently. It also looks like a very large crab is currently living inside of it.
+exception
+{'text': 'A shady guy walks up to you, flashes a badge quickly and asks you an important question. "Are you real?"<div class=\'mt-4\'><a href=\'/i-am-not-a-bot?new_page=true\'  class=\'inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs sm:text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2\'>Perform Verification</a></div>', 'resultText': 'none', 'rewardType': 'none', 'wait_length': 2137, 'rewardAmount': 0}
+
+        need to catch the json for this
+        <img src='/img/sprites/38.png' class="inline-block"><br/>
+        <span style='font-size:11px'>Level 1</span>
+        <br/>
+        <span class='relative z-0 inline-flex shadow-sm rounded-md'>
+        <a class='relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500' href='/npcs/attack/178745865?new_page=true' onclick='clickAndDisable(this)'>Attack</a>
+        <a class='-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500' onclick="showNPC('Rat','/img/sprites/38.png','QSB3ZWFrIHJhdC4gQW55IG9sZCBnZWV6IGNvdWxkIGJlYXQgdGhpcy4=',1,0,1,4,178745865,'/npcs/attack/178745865?new_page=true')">Stats</a>
+        </span>
+

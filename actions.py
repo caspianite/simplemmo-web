@@ -17,19 +17,15 @@ def parse_int_as_basestr(n: int , base: int):
         return parse_int_as_basestr(n//base,base) + convertString[n%base]
 
 
-def get_csrf_token(session): #csrf-token, global token
-    page = session.get("https://web.simple-mmo.com/").content
+def get_csrf_token(browser): #csrf-token, global token
+    page = browser.driver.page_source
     csrf_token = bs(page, features="html.parser").find("meta", attrs={"name":"csrf-token"})["content"]
     #global_token = re.search(r"var token = (.*?);", str(bs(page, features="html.parser").find_all("script"))).group(0).split('"')[1]
     return csrf_token
 
-def get_webapi_token(session, browser, account_data):
-    browser.open("https://simple-mmo.com/home")
-    browser.driver.delete_all_cookies()
-    browser.send_keys("input#email", account_data.email)
-    browser.type("input#password", account_data.email)
-    browser.click("(//button)[1]")
-    time.sleep(2000)
+def get_webapi_token(browser):
+    html = browser.driver.page_source
+    return re.search("api_token=(.*)';}", html).group(1)
 
 
 
@@ -104,6 +100,38 @@ def update_session_cookies(session):
     #         cookie.rest = {'expires': expiry}
     #     if cookie.name == "XSRF-TOKEN":
     #         cookie.rest = {'expires': expiry}
+
+
+
+def browser_sign_up(browser, account_data):
+    browser.open("https://web.simple-mmo.com/register")
+    browser.send_keys('//*[@id="name"]', account_data.username)
+    browser.send_keys('//*[@id="email"]', account_data.email)
+    browser.send_keys('//*[@id="password"]', account_data.password)
+    browser.send_keys('//*[@id="password_confirmation"]', account_data.password)
+    browser.click(f'/html/body/div/div[2]/div/form/div[6]/div[{str(random.randint(1,9))}]')
+    browser.click("/html/body/div/div[2]/div/form/div[7]/button")
+    browser.click("/html/body/div/div[2]/div/form/div[8]/button")
+    browser.click("/html/body/div/div[2]/div/form/div[10]/button")
+    time.sleep(2)
+    browser.open("https://web.simple-mmo.com/home")
+
+def travel(s, csrf, api_token):
+    dh = random.randint(500, 800)
+    response = s.post('https://api.simple-mmo.com/api/travel/perform/f4gl4l3k', data={
+    '_token': csrf,
+    'api_token': api_token,
+    'd_1': dh,
+    'd_2': (dh - random.randint(150, 250)),
+    's': 'false',
+    'travel_id': '0',
+    }
+    )
+    travel_info = json.loads((response.content).decode("utf-8"))
+
+    return travel_info
+    # {'text': 'Welcome to SimpleMMO. This game is incredibly simple. Every time you take a step, you will embark on a small adventure that will be displayed in just a few sentences.', 'resultText': '', 'rewardType': 'none', 'rewardAmount': 0, 'level': 1, 'wait_length': 2813, 'userAmount': '293', 'step_type': 'text', 'heading': 'You take a step...', 'gold_amount': 0, 'exp_amount': 0, 'action': False, 'buttons': False, 'guild_raid_exp': False, 'exp_percentage': 0, 'currentEXP': 0, 'currentGold': 500, 'sprint_expiry': 0, 'travel_background': '/img/bg/6.png', 'modifiers': {'gold_modifiers': [{'amount': 0, 'reason': []}], 'exp_modifiers': [{'amount': 0, 'reason': []}], 'droprate_modifiers': [{'amount': 0, 'reason': []}], 'stepping_modifiers': [{'amount': 0, 'reason': []}]}}
+
 
 
     

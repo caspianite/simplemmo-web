@@ -1,0 +1,53 @@
+submit image
+
+fetch("https://web.simple-mmo.com/api/bot-verification", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/json",
+    "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://web.simple-mmo.com/i-am-not-a-bot?new_page=true",
+  "referrerPolicy": "no-referrer-when-downgrade",
+  "body": "{\"data\":\"$2y$10$qxtKTUwI9AJxIVgB2HOKWeOTrbMr4wPEDMBIpMMO984tbBeS.30T.\",\"x\":591,\"y\":381}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+
+{"title":"Success!","type":"success","result":"You have passed the verification.<br\/><br\/>You have been given <img src='\/img\/icons\/S_Light01.png' class='h-4'> <strong>6<\/strong> experience points.<br\/><br\/><div>You may now close this tab and return back to your previous page.<\/div>"}
+
+fetch("https://web.simple-mmo.com/i-am-not-a-bot?new_page=true", {
+  "headers": {
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "accept-language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "max-age=0",
+    "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-user": "?1",
+    "upgrade-insecure-requests": "1"
+  },
+  "referrer": "https://web.simple-mmo.com/i-am-not-a-bot?new_page=true",
+  "referrerPolicy": "no-referrer-when-downgrade",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+});
+
+
+list of items
+
+                            <div class="text-center bg-white rounded-md p-4 cursor-pointer" onclick="if (!window.__cfRLUnblockHandlers) return false; chooseItem('$2y$10$YW5LcAvf3PYAjL2motbW0uquNpUU.zhFRuhoDgxANBO4h6kl1Wuo6');" data-cf-modified-caf75384e55af3689566d344-=""><img src="/i-am-not-a-bot/generate_image?uid=0"></div>
+                            <div class="text-center bg-white rounded-md p-4 cursor-pointer" onclick="if (!window.__cfRLUnblockHandlers) return false; chooseItem('$2y$10$wp98b0olgeAREW5uewJbuOJtZtI16S7dYAcwEJCq/5z18TsdCsec6');" data-cf-modified-caf75384e55af3689566d344-=""><img src="/i-am-not-a-bot/generate_image?uid=1"></div>
+                            <div class="text-center bg-white rounded-md p-4 cursor-pointer" onclick="if (!window.__cfRLUnblockHandlers) return false; chooseItem('$2y$10$qxtKTUwI9AJxIVgB2HOKWeOTrbMr4wPEDMBIpMMO984tbBeS.30T.');" data-cf-modified-caf75384e55af3689566d344-=""><img src="/i-am-not-a-bot/generate_image?uid=2"></div>
+                            <div class="text-center bg-white rounded-md p-4 cursor-pointer" onclick="if (!window.__cfRLUnblockHandlers) return false; chooseItem('$2y$10$TdhLT/gqL4FbUxyFlQpQS.eqoz3PuBmzN0m85lSRcaIj08sVxrV/S');" data-cf-modified-caf75384e55af3689566d344-=""><img src="/i-am-not-a-bot/generate_image?uid=3"></div>
