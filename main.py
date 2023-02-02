@@ -21,7 +21,7 @@ def start():
         "Sec-Fetch-User": "?1"
         }
 
-        with seleniumbase.SB(demo=False, uc=True, test=True, rtf=True, headless=False, proxy="socks5://93.88.227.48:59166") as driver:
+        with seleniumbase.SB(demo=False, uc=True, test=True, rtf=True, headless=False, proxy="socks5://148.251.40.177:59166") as driver:
 
                 print("start")
                 account = account_data.Account()

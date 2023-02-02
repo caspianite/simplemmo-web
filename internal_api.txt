@@ -91,7 +91,7 @@ await fetch("https://api.simple-mmo.com/api/travel/perform/f4gl4l3k", {
 	"api_token": "iFwd9bHdR07oq9YfYVRHrST0KsYfkq3BO6HKgZMsoCUcnDJDNLJyWX15dQmQ", #simplemmo api token
 	"d_1": "833", #travel click x
 	"d_2": "388", #travel click y
-	"s": "false", #false if automated browser not detected
+	"s": "false", #false if automated browser (checks with is webdriver) not detected
 	"travel_id": "0" #probably the travel dimension used
 }
 

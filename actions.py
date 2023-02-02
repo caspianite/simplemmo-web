@@ -52,59 +52,60 @@ def sign_up(session, account_data, csrf_token):
     if register.status_code == 200:
         return True
 
-def log_in(session, account_data, csrf_token):
-
-    data = {
-    '_token': csrf_token,
-    'email': account_data.email,
-    'password': account_data.password,
-    }
-    login = session.post("https://web.simple-mmo.com/login", data=data, allow_redirects=True)
-
-
+# def log_in(session, account_data, csrf_token):
+#
+#     data = {
+#     '_token': csrf_token,
+#     'email': account_data.email,
+#     'password': account_data.password,
+#     }
+#     login = session.post("https://web.simple-mmo.com/login", data=data, allow_redirects=True)
 
 
-def send_session(session, csrf_token):
-    #hash = parse_int_as_basestr((int(str(random.random())[2:])/20), 20)
-    session.cookies.set("d_h", "true")
-
-    fp = ''.join(random.choice('0123456789abcdef') for i in range(32))
 
 
-    headers= {'referrer': 'https://web.simple-mmo.com/home',
-    'Origin': 'https://web.simple-mmo.com'}
-
-    session.post('https://web.simple-mmo.com/fp', data={'_token': csrf_token, 'fp': fp}, headers=headers)
-    session.post("https://web.simple-mmo.com/api/session-hash", data={}, headers=headers)
-
-
-def update_session_cookies(session):
-    """
-    "function setCookie(cname,cvalue,exdays){var d=new Date();d.setTime(d.getTime()+(exdays*24*60*60*1000));var expires=\"expires=\"+d.toUTCString();document.cookie=cname+\"=\"+cvalue+\";\"+expires+\";path=/\";}" 
-    """
-
-    epoch_with_expiry = ((datetime.datetime.now(datetime.timezone.utc) - datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)) / datetime.timedelta(seconds=1)) + 0.005*24*60*60 #js epoch time with simplemmo expiry
-
-    expiry = datetime.date.strftime(datetime.datetime.utcfromtimestamp(epoch_with_expiry), '%Y-%m-%dT%H:%M:%SZ')
-
-    csrf_token = session.cookies.get_dict()["XSRF-TOKEN"]
-    laravel_token = session.cookies.get_dict()["laravelsession"]
-
-    print(expiry)
-
-    #set cookies here
-
-    # for cookie in session.cookies:
-    #     print(cookie.name)
-    #     if cookie.name == "laravelsession":
-    #         cookie.rest = {'expires': expiry}
-    #     if cookie.name == "XSRF-TOKEN":
-    #         cookie.rest = {'expires': expiry}
+# def send_session(session, csrf_token):
+#     #hash = parse_int_as_basestr((int(str(random.random())[2:])/20), 20)
+#     session.cookies.set("d_h", "true")
+#
+#     fp = ''.join(random.choice('0123456789abcdef') for i in range(32))
+#
+#
+#     headers= {'referrer': 'https://web.simple-mmo.com/home',
+#     'Origin': 'https://web.simple-mmo.com'}
+#
+#     session.post('https://web.simple-mmo.com/fp', data={'_token': csrf_token, 'fp': fp}, headers=headers)
+#     session.post("https://web.simple-mmo.com/api/session-hash", data={}, headers=headers)
+#
+#
+# def update_session_cookies(session):
+#     """
+#     "function setCookie(cname,cvalue,exdays){var d=new Date();d.setTime(d.getTime()+(exdays*24*60*60*1000));var expires=\"expires=\"+d.toUTCString();document.cookie=cname+\"=\"+cvalue+\";\"+expires+\";path=/\";}"
+#     """
+#
+#     epoch_with_expiry = ((datetime.datetime.now(datetime.timezone.utc) - datetime.datetime(1970, 1, 1, tzinfo=datetime.timezone.utc)) / datetime.timedelta(seconds=1)) + 0.005*24*60*60 #js epoch time with simplemmo expiry
+#
+#     expiry = datetime.date.strftime(datetime.datetime.utcfromtimestamp(epoch_with_expiry), '%Y-%m-%dT%H:%M:%SZ')
+#
+#     csrf_token = session.cookies.get_dict()["XSRF-TOKEN"]
+#     laravel_token = session.cookies.get_dict()["laravelsession"]
+#
+#     print(expiry)
+#
+#     #set cookies here
+#
+#     # for cookie in session.cookies:
+#     #     print(cookie.name)
+#     #     if cookie.name == "laravelsession":
+#     #         cookie.rest = {'expires': expiry}
+#     #     if cookie.name == "XSRF-TOKEN":
+#     #         cookie.rest = {'expires': expiry}
 
 
 
 def browser_sign_up(browser, account_data):
     browser.open("https://web.simple-mmo.com/register")
+    time.sleep(5) # while testing if cf catches the browser
     browser.send_keys('//*[@id="name"]', account_data.username)
     browser.send_keys('//*[@id="email"]', account_data.email)
     browser.send_keys('//*[@id="password"]', account_data.password)

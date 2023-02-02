@@ -37,3 +37,10 @@ exception
         <a class='-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500' onclick="showNPC('Rat','/img/sprites/38.png','QSB3ZWFrIHJhdC4gQW55IG9sZCBnZWV6IGNvdWxkIGJlYXQgdGhpcy4=',1,0,1,4,178745865,'/npcs/attack/178745865?new_page=true')">Stats</a>
         </span>
 
+        most likely need to parse and req. this to gain items
+        taken step | gold: 0 | exp: 0 | <img class="inline-block" src="/img/icons/crafting/v1/CopperOre.png" height='20px'><br/>
+        Level 1 <span class='common-item no-border font-semibold'>Common</span>
+        <div></div>
+        <div x-data='{clicked:false}'><button :disabled='clicked' :class="{'opacity-50':clicked}" x-on:click="clicked=true;document.location='/crafting/material/gather/60325781?new_page=true'" class='inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>Mine</button></div>
+
+
