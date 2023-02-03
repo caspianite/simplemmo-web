@@ -205,3 +205,136 @@ GET "https://web.simple-mmo.com/dailyreward"
 
 
 """
+
+{
+	"text": "<img src=\"/img/icons/crafting/v1/CommonWood.png\" height='20px' class='inline-block'><br/>\n        Level 1 <span class='common-item no-border font-semibold'>Common</span>\n        <div></div>\n        <div x-data='{clicked:false}'><button :disabled='clicked' :class=\"{'opacity-50':clicked}\" x-on:click=\"clicked=true;document.location='/crafting/material/gather/60486727?new_page=true'\" class='inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>Chop</button></div>",
+	"resultText": "none",
+	"rewardType": "none",
+	"rewardAmount": 0,
+	"level": 27,
+	"wait_length": 8217,
+	"userAmount": "349",
+	"step_type": "material",
+	"heading": "Common Tree",
+	"gold_amount": 0,
+	"exp_amount": 0,
+	"action": false,
+	"buttons": false,
+	"guild_raid_exp": false,
+	"exp_percentage": 38,
+	"currentEXP": 18057,
+	"currentGold": 3033,
+	"sprint_expiry": 1675441867,
+	"travel_background": "/img/bg/16.png",
+	"modifiers": {
+		"gold_modifiers": [
+			{
+				"amount": 0,
+				"reason": []
+			}
+		],
+		"exp_modifiers": [
+			{
+				"amount": 0,
+				"reason": []
+			}
+		],
+		"droprate_modifiers": [
+			{
+				"amount": 0,
+				"reason": []
+			}
+		],
+		"stepping_modifiers": [
+			{
+				"amount": 0,
+				"reason": []
+			}
+		]
+	}
+}
+
+await fetch("https://web.simple-mmo.com/api/crafting/material/gather/60486727", {
+    "credentials": "include",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0",
+        "Accept": "application/json",
+        "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+        "Content-Type": "application/json",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin"
+    },
+    "referrer": "https://web.simple-mmo.com/crafting/material/gather/60486727?new_page=true",
+    "body": "{\"_token\":\"TSxiicnlcQuoGrX4QCdyFG0jayDHTDf4ZASNGoW9\"}",
+    "method": "POST",
+    "mode": "cors"
+});
+
+
+await fetch("https://web.simple-mmo.com/api/starterpack", {
+    "credentials": "include",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0",
+        "Accept": "*/*",
+        "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin"
+    },
+    "referrer": "https://web.simple-mmo.com/home",
+    "method": "GET",
+    "mode": "cors"
+});
+
+await fetch("https://web.simple-mmo.com/api/dailyreward/claim", {
+    "credentials": "include",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0",
+        "Accept": "application/json",
+        "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+        "Content-Type": "application/json",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin"
+    },
+    "referrer": "https://web.simple-mmo.com/dailyreward",
+    "body": "{\"_token\":\"TSxiicnlcQuoGrX4QCdyFG0jayDHTDf4ZASNGoW9\",\"data\":true}",
+    "method": "POST",
+    "mode": "cors"
+});
+
+
+await fetch("https://web.simple-mmo.com/api/quicksell/18/quantity", {
+    "credentials": "include",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0",
+        "Accept": "application/json",
+        "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+        "Content-Type": "application/json",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin"
+    },
+    "referrer": "https://web.simple-mmo.com/inventory/items",
+    "body": "{\"_token\":\"TSxiicnlcQuoGrX4QCdyFG0jayDHTDf4ZASNGoW9\",\"data\":\"1\"}", #probably amount
+    "method": "POST",
+    "mode": "cors"
+});
+
+await fetch("https://web.simple-mmo.com/api/travel/sprint", {
+    "credentials": "include",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0",
+        "Accept": "*/*",
+        "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3",
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin"
+    },
+    "referrer": "https://web.simple-mmo.com/travel?new_page=true",
+    "body": "minutes=1",
+    "method": "POST",
+    "mode": "cors"
+});

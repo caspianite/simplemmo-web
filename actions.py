@@ -29,7 +29,7 @@ def get_webapi_token(browser):
 
 
 
-def sign_up(session, account_data, csrf_token):
+def sign_up(s, account_data, csrf_token):
 
     data = {
     '_token': csrf_token,
@@ -43,8 +43,8 @@ def sign_up(session, account_data, csrf_token):
     'contact_email': '',
 }
 
-    session.get("https://web.simple-mmo.com/register")
-    register = session.post("https://web.simple-mmo.com/register", headers= {'referrer': 'https://web.simple-mmo.com/register',
+    s.get("https://web.simple-mmo.com/register")
+    register = s.post("https://web.simple-mmo.com/register", headers= {'referrer': 'https://web.simple-mmo.com/register',
     'Origin': 'https://web.simple-mmo.com'}, data=data, allow_redirects=True)
     print(register.status_code)
     print(data)
@@ -117,6 +117,7 @@ def browser_sign_up(browser, account_data):
     time.sleep(2)
     browser.open("https://web.simple-mmo.com/home")
 
+
 def travel(s, csrf, api_token):
     dh = random.randint(500, 800)
     response = s.post('https://api.simple-mmo.com/api/travel/perform/f4gl4l3k', data={
@@ -135,4 +136,68 @@ def travel(s, csrf, api_token):
 
 
 
-    
+def wave(s, csrf, user_id):
+    wave = s.post(f"https://web.simple-mmo.com/api/wave/{str(user_id)}", json={ # bool needs encoding
+        "_token": csrf,
+        "data": True
+    })
+
+    print(f"waving user id {str(user_id)}")
+    print(wave.content)
+
+
+def enum_inventory(s):
+    print("enumerating inventory items")
+    enumeration_complete = False
+    page = 1
+    items = []
+    items_value_gold = 0
+    while enumeration_complete == False:
+
+        inventory = (s.get(f"https://web.simple-mmo.com/inventory?page={str(page)}").content).decode("utf-8")
+        items_retrieved = []
+
+        for i in re.finditer("quickSellItem\((.*?)\);", inventory):
+            item_string = i.split(",")
+            id = int(item_string[0])
+            name = item_string[1]
+            value = int(item_string[2])
+            quantity = int(item_string[4])
+            items_retrieved.append({
+                "id": id, "name": name, "value": value, "quantity": quantity
+            })
+            items_value_gold += quantity
+
+        if len(items_retrieved) == 0:
+            enumeration_complete = True
+            break
+
+        items.append(items_retrieved)
+        page += 1
+        time.sleep(1)
+
+    print(f"enumerated inventory worth {str(items_value_gold)} gold")
+
+
+def quicksell_items(s, csrf, items_dict_list):
+    for item in items_dict_list:
+        sale = (s.post(f"https://web.simple-mmo.com/api/quicksell/{str(item['id'])}/quantity", body={
+            "token": csrf, "data": str(item["quantity"])
+        }).content).decode("utf-8")
+
+        print(sale)
+
+
+def travel_sprint_loop(s):
+    time.sleep(60)
+    while True:
+
+        sprint = s.post('https://web.simple-mmo.com/api/travel/sprint', data={
+        'minutes': '4'
+
+        })
+        print("sprinted travel")
+        time.sleep(300)
+
+
+

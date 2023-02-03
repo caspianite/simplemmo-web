@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="eng" >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta
+         name='viewport'
+         content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+    />
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="TSxiicnlcQuoGrX4QCdyFG0jayDHTDf4ZASNGoW9">
+
+    <title>Horse and Carriage | SimpleMMO</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/smmo/all.css?v=2.27">
+
+    <link rel="stylesheet" href="/css/tailwind-all.css?v=1.45">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,500;1,500&amp;display=swap" rel="stylesheet">
+
+    <!-- App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      body{
+        font-family: 'Inter', sans-serif
+      }
+      .bg-brand{
+        background-color: #f39c12;
+      }
+      img{
+        display:initial;
+      }
+      .webapp-hide{
+          display:none!important;
+      }
+      .accessible--button{
+        opacity:0;
+        height:2px;
+        width:2px;
+        padding:0;
+        overflow: hidden;
+        font-size:0px;
+        margin:0;
+      }
+      .accessible--button-2{
+        opacity:0;
+        height:2px;
+        width:2px;
+        padding:0;
+        overflow: hidden;
+        font-size:0px;
+        margin:0;
+      }
+      .sidenav {
+  max-height:600px;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 9999999; /* Stay on top */
+    border:1px solid #eee;
+    /*top: 0; /* Stay at the top */
+    right: 0;
+    bottom:0;
+    background-color: #fff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 15px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+    </style>
+
+<style>
+::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 20px;
+  border: 7px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c5c5c5;
+}
+
+div:hover > ::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  visibility: visible;
+}
+</style>
+
+    <script src="/js/cookies.js" type="beb284c4df4c25cfdaef0215-text/javascript"></script>
+    <script data-cfasync="false" defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    <script type="beb284c4df4c25cfdaef0215-text/javascript"> var token = "TSxiicnlcQuoGrX4QCdyFG0jayDHTDf4ZASNGoW9"; </script>
+
+</head>
+
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="beb284c4df4c25cfdaef0215-|49"></script><body onload="" class="dark:bg-gray-900">
+
+  <div class="h-screen flex overflow-hidden bg-gray-100"
+    x-data="{mobileSideBar:false,webAppSideBar:true}"
+    x-init="webAppSideBar = docCookies.hasItem('web_app_menu') ? (docCookies.getItem('web_app_menu') == 'false') : true;"
+    >
+    <div class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true" x-show="mobileSideBar">
+
+      <div class="fixed inset-0 bg-gray-600 bg-opacity-75" aria-hidden="true"  x-show="mobileSideBar" x-on:click="mobileSideBar=false"
+      x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+      style="display:none"
+      x-transition:leave="transition ease-in-out duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+
+      <div class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white"
+          x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+          x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
+          style="display:none"
+          x-show="mobileSideBar">
+
+        <div class="absolute top-0 right-0 -mr-12 pt-2">
+          <button   x-show="mobileSideBar" x-on:click="mobileSideBar=false"
+          style="display:none"
+          x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in-out duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <span class="sr-only">Close sidebar</span>
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex-shrink-0 flex items-center justify-center px-4">
+          <img class="h-16 w-auto" src="/img/dragon-head-trans.png">
+        </div>
+        <div class="mt-5 flex-1 h-0 overflow-y-auto">
+
+          <div class="inline-flex sm:hidden items-center justify-center w-full mb-4">
+            <a href="/travel" class="nightwind-prevent dark:text-white inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-xs sm:text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Travel
+              <div class="inline-block ml-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <nav class="px-4 space-y-1">
+
+            <a href="/" class="relative text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+              </svg>
+              Home
+            </a>
+
+            <a href="/town" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+              </svg>
+              Town
+            </a>
+
+            <a href="/inventory" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              Inventory
+            </a>
+
+
+            <a href="/battle/menu" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+              </svg>
+              Battle
+            </a>
+
+            <a href="/quests/viewall" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Quests
+            </a>
+
+            <hr class="dark:border-gray-800"/>
+
+            <a href="/user/character" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"></path>
+              </svg>
+              Your Character
+            </a>
+
+            <a href="/jobs/viewall" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Jobs
+            </a>
+
+            <a href="/crafting/menu" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+              Crafting
+            </a>
+
+            <a href="/tasks/viewall" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+              </svg>
+              Tasks
+            </a>
+
+            <a href="/collection/962786/avatars" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+              </svg>
+              Collections
+            </a>
+
+            <a href="/guilds/menu" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+              Guilds
+            </a>
+
+            <hr class="dark:border-gray-800"/>
+
+            <a href="/diamondstore/menu" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+              Diamond Store
+            </a>
+
+            <a href="/support" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Support
+            </a>
+
+            <a href="/discussionboards/menu" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+              </svg>
+              Discussion Boards
+            </a>
+
+            <a href="/userlist/all" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              Players
+            </a>
+
+            <a href="/leaderboards" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              Leaderboards
+            </a>
+
+            <a href="/events/viewall" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-xs font-medium rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Events
+            </a>
+
+          </nav>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 w-14" aria-hidden="true">
+        <!-- Dummy element to force sidebar to shrink to fit close icon -->
+      </div>
+    </div>
+
+    <!-- Static sidebar for desktop -->
+    <div class="hidden md:flex md:flex-shrink-0 bg-white dark:bg-gray-950 overflow-hidden ease-in-out duration-500  sm:duration-700 transition-width " :class="{ 'w-16' : !webAppSideBar, 'w-48 lg:w-64': webAppSideBar }"
+
+    x-transition:enter="ease-in-out duration-500 sm:duration-700 transition-width"
+    x-transition:enter-start="w-16" x-transition:enter-end="w-48 lg:w-64"
+    x-transition:leave="ease-in-out duration-500 sm:duration-700 transition-width"
+    x-transition:leave-start="w-48 lg:w-64"
+    x-transition:leave-end="w-16"
+
+    >
+      <div class="flex flex-col w-48 lg:w-64 bg-white dark:bg-gray-950">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+        <div class="flex flex-col flex-grow border-r border-gray-200  pt-5 bg-white dark:bg-gray-950 overflow-y-auto">
+          <div class="px-4 text-center"
+          x-show="webAppSideBar"
+          x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+            x-transition:enter-start="opacity-0 transform translate-x-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-500"
+            x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+            >
+            <a href="/">
+              <img src="/img/dragon-head-trans.png" class="block mx-auto h-12">
+              <img class="h-4  block mx-auto mt-2" src="/img/logo-black-text-only.png" alt="SimpleMMO Logo">
+            </a>
+          </div>
+          <div class="mt-5 flex-grow flex flex-col">
+            <hr class="my-4 border-gray-100  dark:border-gray-800" x-show="webAppSideBar" />
+            <nav class="mt-5 flex-1 px-2 bg-white dark:bg-gray-950">
+              <h3 class="px-3 mb-4 text-xs font-semibold text-gray-500 uppercase tracking-wider" id="projects-headline"
+              x-show="webAppSideBar"
+              x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+              x-transition:enter-start="opacity-0 transform translate-x-2"
+              x-transition:enter-end="opacity-100 transform translate-y-0"
+              x-transition:leave="transition ease-in duration-500"
+              x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+              >
+                Main
+              </h3>
+              <a href="/home" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-200   group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Home</span>
+              </a>
+
+              <a href="/town" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300  group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Town</span>
+              </a>
+
+              <a href="/inventory/items" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300  group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Inventory</span>
+              </a>
+
+              <a href="/battle/menu" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300   group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Battle</span>
+              </a>
+
+              <a href="/quests/viewall" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300   group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Quests</span>
+              </a>
+              <hr class="my-4 border-gray-100 dark:border-gray-800"/>
+
+              <h3 class="px-3 mb-4 text-xs font-semibold text-gray-500 uppercase tracking-wider"
+              x-show="webAppSideBar"
+              x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+              x-transition:enter-start="opacity-0 transform translate-x-2"
+              x-transition:enter-end="opacity-100 transform translate-y-0"
+              x-transition:leave="transition ease-in duration-500"
+              x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+              id="projects-headline">
+                Character
+              </h3>
+
+              <a href="/character" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300   group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Your Character</span>
+              </a>
+
+              <a href="/jobs/viewall" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900  dark:text-gray-300  group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Jobs</span>
+              </a>
+
+              <a href="/crafting/menu" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300  group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Crafting</span>
+              </a>
+
+              <a href="/tasks/viewall" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300   group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Tasks</span>
+              </a>
+
+              <a href="/collection/962786/avatars" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300  group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Collections</span>
+              </a>
+
+              <a href="/guilds/menu" class=" text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300  group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Guilds</span>
+              </a>
+
+              <a href="/diamondstore/menu" class="flex lg:hidden  text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300  group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Diamond Store</span>
+              </a>
+
+              <a href="/support" class="flex lg:hidden  text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300  group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-500 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <span
+                x-show="webAppSideBar"
+                x-transition:enter="transition-transform transition-opacity ease-out duration-500"
+                x-transition:enter-start="opacity-0 transform translate-x-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-end="opacity-0 transform -translate-x-2"
+
+                >Support</span>
+              </a>
+
+
+            </nav>
+          </div>
+          <div class="flex-shrink-0 flex border-t border-gray-200 p-4 hidden">
+            <a href="/logout" class="flex-shrink-0 w-full group block">
+              <div class="flex items-center">
+                <div>
+                  <img class="inline-block w-9 rounded-full" src="/img/sprites/19.png" alt="">
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                    Melissa2194Smith
+                  </p>
+                  <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                    Logout
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-0 flex-1 overflow-hidden relative">
+      <div class="absolute left-0 top-0 mt-5 ml-4 text-gray-400 hidden 2xl:block">
+        <button x-on:click="webAppSideBar = !webAppSideBar; if (webAppSideBar == false) docCookies.setItem('web_app_menu', true, (7*24*60*60), '/'); else docCookies.setItem('web_app_menu', true, (-10), '/');">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform"   :class="{ 'rotate-0' : !webAppSideBar}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav class="bg-white dark:bg-gray-950 shadow-sm z-20">
+        <div class="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div class="flex justify-between h-16">
+            <div class="flex px-2 lg:px-0">
+              <div class="inline-block md:hidden h-full flex items-center">
+
+                <div class="flex items-center md:hidden">
+                  <!-- Mobile menu button -->
+                  <button type="button" x-on:click="mobileSideBar=true" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+
+
+                <div class="hidden sm:inline-flex items-center ml-4">
+                  <a href="/travel" class="dark:text-white inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Travel
+                    <div class="inline-block ml-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="hidden 2xl:block 2xl:absolute 2xl:left-0 2xl:top-0 2xl:mt-5 2xl:ml-5 text-gray-400">
+                <button  x-on:click="webAppSideBar = !webAppSideBar; if (webAppSideBar == false) docCookies.setItem('web_app_menu', true, (7*24*60*60), '/'); else docCookies.setItem('web_app_menu', true, (-10), '/');" class="inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform"   :class="{ 'rotate-0' : !webAppSideBar}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="hidden md:flex">
+
+                <div class="inline-flex items-center mr-4 2xl:hidden mr-4 lg:mr-8 text-gray-400">
+                  <button  x-on:click="webAppSideBar = !webAppSideBar; if (webAppSideBar == false) docCookies.setItem('web_app_menu', true, (7*24*60*60), '/'); else docCookies.setItem('web_app_menu', true, (-10), '/');" class="inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform"   :class="{ 'rotate-0' : !webAppSideBar}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="inline-flex items-center mr-4 lg:mr-8">
+                  <a href="/travel" class="dark:text-white dark:bg-indigo-600 dark:hover:bg-indigo-700 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 accessible--button">
+                    Travel
+                    <div class="inline-block ml-4 hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="/travel?new_page=true" class="dark:text-white dark:bg-indigo-600 dark:hover:bg-indigo-700 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Travel
+                    <div class="inline-block ml-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                <a href="/diamondstore/menu" class=" mr-4 lg:mr-8 hidden lg:inline-flex border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 items-center px-1 pt-1 border-b-2 text-sm font-medium  dark:text-gray-300">
+                  Diamond Store
+
+                                  </a>
+                <a href="/support" class=" mr-4 lg:mr-8 hidden lg:inline-flex border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium dark:text-gray-300">
+                  Support
+                </a>
+
+                <div class="inline-block relative h-full flex items-center" x-data="{dropdown:false}">
+                <a href="javascript:;" x-on:click="dropdown=!dropdown" x-on:click.away="dropdown=false" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium dark:text-gray-300 h-full">
+                  Community
+                </a>
+                <div class="absolute z-10 left-1/2 top-12 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0" style="display:none;" x-show="dropdown"
+                x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" >
+                  <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div class="relative grid gap-6 bg-white dark:bg-neutral-900 sm:gap-4 dark:border dark:border-gray-800">
+
+                      <nav class="space-y-1 bg-white dark:bg-neutral-800 mx-2  my-2" aria-label="Sidebar">
+                        <a href="/discussionboards/menu" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg"class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6"fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                              </svg>
+                          <span class="ml-2 truncate">
+                            Discussion Boards
+                          </span>
+                        </a>
+                        <a href="/userlist/all" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                          <span class="ml-2 truncate">
+                            Players
+                          </span>
+                        </a>
+                        <a href="/leaderboards" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                          <span class="ml-2 truncate">
+                            Leaderboards
+                          </span>
+                        </a>
+                        <a href="/events/viewall" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6"fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
+                            </svg>
+                          <span class="ml-2 truncate">
+                            Events
+                          </span>
+                        </a>
+                        <a href="/social-media" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                          </svg>
+                          <span class="ml-2 truncate">
+                            Social Media
+                          </span>
+                        </a>
+                        <a href="/podcast" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                          </svg>
+                          <span class="ml-2 truncate">
+                            Podcast
+                          </span>
+                        </a>
+                      </nav>
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="ml-4 flex items-center relative" x-data="{show_mobile_search:false}">
+                <div class="hidden lg:flex items-center justify-center px-2 lg:ml-6 lg:justify-end dark:text-white">
+                    <div class="max-w-lg w-full lg:max-w-xs">
+                      <label for="search" class="sr-only">Search</label>
+                      <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                          <!-- Heroicon name: solid/search -->
+                          <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <form action="/search" method="GET">
+                          <input id="search" name="search_query" minlength="3" maxlength="30" required value="" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Search" type="search">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                <button x-on:click="show_mobile_search=true" class="inline-block lg:hidden relative flex-shrink-0 bg-white  p-1 text-gray-400 rounded-full hover:text-gray-500 mr-4">
+                    <span class="sr-only">Search</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <div class="absolute z-20 flex w-full bg-white" x-show="show_mobile_search" style="display:none">
+                    <button x-on:click="show_mobile_search=false" type="button" class=" rounded-full  mr-1  inline-flex items-center px-2.5 py-1.5  text-xs font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                    </button>
+                    <form action="/search" method="GET" class="flex-grow">
+                        <input id="search" name="search_query" placeholder="Enter query here..." minlength="2" required value="" class="dark:text-white block w-full pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 text-xs sm:text-sm" placeholder="Search" type="search">
+                    </form>
+                </div>
+
+                <a href="/friends">
+                    <button class="relative flex-shrink-0 bg-white p-1 text-gray-400 dark:text-gray-300 dark:bg-gray-950 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mr-4">
+                    <span class="sr-only">View Friends</span>
+                    <!-- Heroicon name: outline/bell -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                  </button>
+                </a>
+
+              <a href="/messages/inbox">
+                <button class="relative flex-shrink-0 bg-white p-1 text-gray-400 dark:text-gray-300 dark:bg-gray-950 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mr-4">
+                <span class="sr-only">View Messages</span>
+                <!-- Heroicon name: outline/bell -->
+                <svg  class="h-6 w-6 z-90" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                              </button>
+              </a>
+
+              <a href="/events">
+                <button class="relative flex-shrink-0 bg-white p-1 text-gray-400 dark:text-gray-300 dark:bg-gray-950 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <span class="sr-only">View notifications</span>
+                <!-- Heroicon name: outline/bell -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                                <span class="absolute -right-0.5 z-10 top-0 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-400 dark:text-white">
+                  10
+                </span>
+                              </button>
+              </a>
+
+              <div class="ml-4 relative flex-shrink-0"   x-on:click.away="profileDropdown = false" x-data="{ profileDropdown: false, user: {level: null} }">
+                <div class="flex">
+                  <button id="user-menu-button" class="bg-white dark:bg-gray-950 rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" x-on:click="saveData('F2FLK');profileDropdown=true;"  style="opacity:0; height:1px;width:1px;display:inline-block;"></button>
+
+                  <button type="button"
+                   x-on:click="profileDropdown = !profileDropdown;
+                      fetch('/api/web-app')
+                      .then(response => response.json())
+                      .then(data => user = data).then(function(){
+                        document.getElementById('energy_bar').style.width = user.energy_percent+'%';
+                        document.getElementById('health_bar').style.width = user.hp_percent+'%';
+                        document.getElementById('experience_bar').style.width = user.exp_percent+'%';
+                        document.getElementById('quest_points_bar').style.width = user.quest_points_percent+'%';
+                        console.log(user.quest_points_percent);
+                      });" class="bg-white dark:bg-gray-950 rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="the-user-menu-button-2" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="h-8" src="/img/sprites/19.png" alt="">
+                  </button>
+                </div>
+
+                <div
+                style="display:none;"
+                x-show="profileDropdown"
+                x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100"
+                x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90"
+                class="absolute z-30 right-0 mt-3 md:px-2 w-screen max-w-md sm:px-0 overflow-y-auto h-screen pb-20">
+                  <div class="rounded-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white dark:bg-neutral-800 border border-gray-100 z-30 dark:border-1 dark:border-gray-800">
+                    <div class="p-5 bg-white dark:bg-neutral-800  z-30">
+                        <div class="text-center sm:text-left sm:flex sm:items-center">
+                          <div class="mr-8 flex-shrink-0">
+                            <a href="/user/view/962786">
+                              <div class="h-20 w-20 rounded-full ring-4 ring-white dark:ring-gray-850 bg-white flex items-center justify-center" style=" background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0.3) 100%), url('/img/bg/18.png');background-size:cover;background-position:center;">
+                                <img class="h-14" src="/img/sprites/19.png" alt="" style="image-rendering: pixelated;">
+                              </div>
+                            </a>
+                          </div>
+                          <div class="flex-grow">
+                            <span class="sm:flex sm:items-center">
+                              <span class="text-xs sm:text-base font-medium text-gray-900 dark:text-gray-200">
+                                <a class='text-indigo-600 hover:text-indigo-700' href='/user/view/962786'> Melissa2194Smith </a>
+                              </span>
+                            </span>
+                            <span class="mt-1 block text-xs sm:text-sm text-gray-500 dark:text-gray-300">
+                              Level <span x-text="user.level">Loading...</span>
+                            </span>
+                            <div class="w-full bg-gray-100 h-2 rounded-lg	mt-2 dark:bg-gray-800">
+                              <div class="w-0 bg-green-400 h-full rounded-lg"  id="experience_bar"></div>
+                            </div>
+
+                          <div class="">
+                              <div>
+                                  <span class="mt-1 text-sm text-gray-400 dark:text-gray-400">
+                                    <span class="" x-text="user.exp_remaining">1,250</span> EXP remaining</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="border-gray-100 my-2 dark:border-gray-700">
+
+                    <div class="relative grid gap-4 bg-white dark:bg-neutral-800 px-5 py-2 sm:gap-4 grid-cols-2 lg:grid-cols-2">
+
+                      <span class="-m-3 p-3 flex items-start items-center rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md text-white sm:h-12 sm:w-12">
+                          <img src="/img/icons/I_GoldCoin.png" class="w-6">
+                        </div>
+                        <div class="ml-4 overflow-hidden">
+                          <p class="text-xs sm:text-sm font-medium text-gray-900">
+                            Gold
+                          </p>
+                          <p class="mt-1 text-xs sm:text-sm text-gray-500 truncate dark:text-gray-400" x-text="user.gold">
+                            Loading...
+                          </p>
+                        </div>
+                      </span>
+
+                      <span class="-m-3 p-3 flex items-start items-center rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md text-white sm:h-12 sm:w-12">
+                          <img src="/img/icons/I_GoldCoin.png" class="w-6">
+                        </div>
+                        <div class="ml-4 overflow-hidden">
+                          <p class="text-xs sm:text-sm font-medium text-gray-900">
+                            Bank
+                          </p>
+                          <p class="mt-1 text-xs sm:text-sm text-gray-500 truncate dark:text-gray-400" x-text="user.bank">
+                            Loading...
+                          </p>
+                        </div>
+                      </span>
+
+                      <span class="-m-3 p-3 flex items-start items-center rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md text-white sm:h-12 sm:w-12">
+                          <img src="/img/icons/I_Diamond.png">
+                        </div>
+                        <div class="ml-4 overflow-hidden">
+                          <p class="text-xs sm:text-sm font-medium text-gray-900">
+                            Diamonds
+                          </p>
+                          <p class="mt-1 text-xs sm:text-sm text-gray-500  dark:text-gray-400" x-text="user.diamonds">
+                            Loading...
+                          </p>
+                        </div>
+                      </span>
+
+                      <span class="-m-3 p-3 flex items-start items-center rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md text-white sm:h-12 sm:w-12">
+                          <img src="/img/icons/A_Shoes01.png" class=" h-8 w-8">
+                        </div>
+                        <div class="ml-4 overflow-hidden">
+                          <p class="text-xs sm:text-sm font-medium text-gray-900">
+                            Total Steps
+                          </p>
+                          <p class="mt-1 text-xs sm:text-sm text-gray-500  dark:text-gray-400" x-text="user.total_steps">
+                            Loading...
+                          </p>
+                        </div>
+                      </span>
+                    </div>
+
+                    <hr class="border-gray-100 my-2  dark:border-gray-700">
+
+                    <div class="px-5 bg-white dark:bg-neutral-800">
+                      <div>
+                        <div class="relative grid grid-cols-1 gap-6 bg-white dark:bg-neutral-800  py-4 sm:gap-4 lg:grid-cols-1">
+                            <span class="-m-3 p-3 flex items-start items-center rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md text-white sm:h-12 sm:w-12">
+                                <img src="/img/icons/S_Holy01.png">
+                              </div>
+                              <div class="ml-4 w-full">
+                                <div class="w-full bg-gray-100 h-2 rounded-lg	">
+                                    <div class="w-0 bg-red-400 h-full rounded-lg"  id="health_bar"></div>
+                                </div>
+
+                                <div class="flex justify-between mt-1">
+                                    <div>
+                                        <p class="font-medium text-gray-900 text-xs sm:text-sm">
+                                            Health
+                                          </p>
+                                    </div>
+                                    <div>
+                                        <p class="mt-1 text-xs">
+                                            <span class="text-gray-400  dark:text-gray-400" x-text="user.current_hp ? format_number(user.current_hp) : 0">0</span> <span class="text-gray-400  dark:text-gray-400"> out of <span x-text="user.max_hp">1,250</span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                              </div>
+                            </span>
+                            <span class="-m-3 p-3 flex items-start items-center rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md text-white sm:h-12 sm:w-12">
+                                  <img src="/img/icons/S_Thunder01.png">
+                                </div>
+                                <div class="ml-4 w-full">
+                                  <div class="w-full bg-gray-100 h-2 rounded-lg	">
+                                      <div class="w-0 bg-yellow-300 h-full rounded-lg"  id="energy_bar"></div>
+                                  </div>
+
+                                  <div class="flex justify-between mt-1">
+                                      <div>
+                                          <p class="font-medium text-gray-900 text-xs sm:text-sm inline-block">
+                                              Energy
+                                          </p>
+                                          <a href="/diamondstore/rewards/energy-points?new_page=true" x-on:click="profileDropdown=false;"><span class="text-indigo-600 hover:text-indigo-700 text-xs ml-1 font-medium"> Refill </span></a>
+                                      </div>
+                                      <div>
+                                          <p class="mt-1 text-xs">
+                                            <span class="text-gray-400  dark:text-gray-400" x-text="user.energy">1,250</span> <span class="text-gray-400  dark:text-gray-400"> out of <span x-text="user.max_energy">1,250</span></span>
+                                      </div>
+                                  </div>
+                                </div>
+                              </span>
+                              <span class="-m-3 p-3 flex items-start items-center rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md text-white sm:h-12 sm:w-12">
+                                  <img src="/img/icons/S_Ice03.png">
+                                </div>
+                                <div class="ml-4 w-full">
+                                  <div class="w-full bg-gray-100 h-2 rounded-lg	">
+                                      <div class="w-0 bg-green-400 h-full rounded-lg"  id="quest_points_bar"></div>
+                                  </div>
+
+                                  <div class="flex justify-between mt-1">
+                                      <div>
+                                          <p class="font-medium text-gray-900 text-xs sm:text-sm inline-block">
+                                              Quest Points
+                                          </p>
+                                          <a href="/diamondstore/rewards/quest-points?new_page=true" x-on:click="profileDropdown=false;"><span class="text-indigo-600 hover:text-indigo-700 text-xs ml-1 font-medium"> Refill </span></a>
+
+                                      </div>
+                                      <div>
+                                          <p class="mt-1 text-xs">
+                                            <span class="text-gray-400  dark:text-gray-400" x-text="user.quest_points">1,250</span> <span class="text-gray-400  dark:text-gray-400"> out of <span x-text="user.max_quest_points">1,250</span></span>
+                                      </div>
+                                  </div>
+                                </div>
+                              </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="border-gray-100 my-2  dark:border-gray-700">
+
+                    <nav class="space-y-1 bg-white dark:bg-neutral-800 mx-4 mb-8 mt-6" aria-label="Sidebar">
+                      <a href="/user/view/962786" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        <span class="ml-2 truncate">
+                          Profile
+                        </span>
+                      </a>
+                        <a href="/diamondstore/membership" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200 " aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg"  class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                            </svg>
+                          <span class="ml-2 truncate">
+                            Membership
+                          </span>
+                        </a>
+                        <a href="/diamondstore/membership/portal" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg"  class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                          <span class="ml-2 truncate">
+                            Payments and Invoices
+                          </span>
+                        </a>
+                        <a href="/preferences" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                          <span class="ml-2 truncate">
+                            Settings
+                          </span>
+                        </a>
+                        <a href="/logout" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center px-3 py-2 text-xs sm:text-sm font-medium rounded-md dark:text-gray-300 dark:hover:text-gray-200" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                            </svg>
+                          <span class="ml-2 truncate">
+                            Logout
+                          </span>
+                        </a>
+                    </nav>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </nav>
+
+
+
+<main class="flex-1 relative overflow-y-auto focus:outline-none" style="overflow:overlay;">
+<div class="bg-indigo-600 text-sm  dark:bg-indigo-600 hidden">
+  <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between flex-wrap">
+      <div class="w-0 flex-1 flex items-center">
+        <span class="flex p-2 rounded-lg bg-indigo-800 dark:bg-indigo-800 hidden sm:inline-block">
+          <!-- Heroicon name: outline/speakerphone -->
+          <svg class="h-6 w-6 text-white dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+          </svg>
+        </span>
+        <p class="ml-3 font-medium text-white dark:text-white truncate">
+          <span class="hidden sm:inline">
+            Welcome to the SimpleMMO Web App beta. Please report any bugs that you experience if not reported already.
+          </span>
+        </p>
+      </div>
+      <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+        <a href="/discussionboards/category/bugs" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50 dark:text-indigo-600 dark:bg-white dark:hover:bg-indigo-50">
+          Report Bugs
+        </a>
+      </div>
+      <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3 hidden">
+        <button type="button" class="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2 ">
+          <span class="sr-only">Dismiss</span>
+          <!-- Heroicon name: outline/x -->
+          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="web-app-container">
+
+<div class="py-6 max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+
+    <div>
+
+    </div>
+
+<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" x-data="{showInfo:false,name:null,modifiers:{item:null,npc:null,material:null,travelText:null},materials:{fish:{chance:null,maxLevel:null},ore:{chance:null,maxLevel:null},treasure:{chance:null,maxLevel:null},trees:{chance:null,maxLevel:null},}}">
+
+<section class="fixed inset-0 overflow-hidden z-20" aria-labelledby="slide-over-title" role="dialog" aria-modal="true" style="display:none;" x-show="showInfo">
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true" x-on:click="showInfo=false;"
+    x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in-out duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+    x-show="showInfo"></div>
+
+    <div class="fixed inset-y-0 right-0 pl-10 max-w-full flex">
+      <div class="w-screen max-w-md"
+      x-show="showInfo"
+      x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+      x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full">
+        <div class="h-full flex flex-col py-6 bg-white shadow-xl overflow-y-scroll">
+          <div class="px-4 sm:px-6">
+            <div class="flex items-start justify-between">
+              <h2 class="text-lg font-medium text-gray-900" id="slide-over-title" x-text="name">
+                Panel title
+              </h2>
+              <div class="ml-3 h-7 flex items-center">
+                <button class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"  x-on:click="showInfo=false;">
+                  <span class="sr-only">Close panel</span>
+                  <!-- Heroicon name: outline/x -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 relative flex-1 px-4 sm:px-6">
+            <div>
+              <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-1">
+
+                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                  <dt class="text-sm font-medium text-gray-500 truncate">
+                    Item
+                  </dt>
+                  <dd class="mt-1 text-3xl font-semibold text-gray-900" >
+                    <span x-text="modifiers.item">Loading...</span>%
+                  </dd>
+                </div>
+
+                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                  <dt class="text-sm font-medium text-gray-500 truncate">
+                    NPC
+                  </dt>
+                  <dd class="mt-1 text-3xl font-semibold text-gray-900">
+                    <span x-text="modifiers.npc">Loading...</span>%
+                  </dd>
+                </div>
+
+                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                  <dt class="text-sm font-medium text-gray-500 truncate">
+                    Material
+                  </dt>
+                  <dd class="mt-1 text-3xl font-semibold text-gray-900">
+                    <span x-text="modifiers.material">Loading...</span>%
+                  </dd>
+                </div>
+
+                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                  <dt class="text-sm font-medium text-gray-500 truncate">
+                    Travel Text
+                  </dt>
+                  <dd class="mt-1 text-3xl font-semibold text-gray-900">
+                    <span x-text="modifiers.travelText">Loading...</span>%
+                  </dd>
+                </div>
+
+                <hr class="dark:border-gray-800"/>
+
+                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                  <dt class="text-sm font-medium text-gray-500 truncate">
+                    Fish
+                  </dt>
+                  <dd class="mt-1 text-3xl font-semibold text-gray-900">
+                    <span x-text="materials.fish.chance">Loading...</span>%
+                  </dd>
+                </div>
+
+                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                  <dt class="text-sm font-medium text-gray-500 truncate">
+                    Ore
+                  </dt>
+                  <dd class="mt-1 text-3xl font-semibold text-gray-900">
+                    <span x-text="materials.ore.chance">Loading...</span>%
+                  </dd>
+                </div>
+
+                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                  <dt class="text-sm font-medium text-gray-500 truncate">
+                    Treasure
+                  </dt>
+                  <dd class="mt-1 text-3xl font-semibold text-gray-900">
+                    <span x-text="materials.treasure.chance">Loading...</span>%
+                  </dd>
+                </div>
+
+                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                  <dt class="text-sm font-medium text-gray-500 truncate">
+                    Trees
+                  </dt>
+                  <dd class="mt-1 text-3xl font-semibold text-gray-900">
+                    <span x-text="materials.trees.chance">Loading...</span>%
+                  </dd>
+                </div>
+
+              </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200 dark:divide-gray-800">
+    <img class="w-full h-auto flex-shrink-0 mx-auto bg-black" src="/img/bg/6.png" alt="Simpletopia">
+    <div class="flex-1 flex flex-col p-4">
+      <h3 class="mt-6 text-gray-900 text-sm font-medium"> Simpletopia</h3>
+      <dl class="mt-1 flex-grow flex flex-col">
+        <dd class="text-gray-500 text-sm">Level 1</dd>
+        <div class="my-4">
+          <button type="button" x-on:click="showInfo=true;name='Simpletopia';modifiers.item=8;modifiers.npc=10;modifiers.material=8;modifiers.travelText=100 - (modifiers.item + modifiers.npc + modifiers.material);materials.fish.chance=25;materials.ore.chance=25;materials.treasure.chance=25;materials.trees.chance=25;" class="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            View Stats
+          </button>
+        </div>
+        <div class="mt-3 text-gray-500 text-sm">
+            The common land of SimpleMMO. A place where anything can (and probably will) happen.
+        </div>
+
+
+      </dl>
+    </div>
+    <div>
+      <div class="w-full">
+        <a href="javascript:;" onclick="if (!window.__cfRLUnblockHandlers) return false; postPopup('Walk to Simpletopia','Are you sure that you want to walk here? It will take you 0 steps to arrive.','/api/horse-and-carriage/1/steps', 'Yes');" class="relative -mr-px w-full flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500" data-cf-modified-beb284c4df4c25cfdaef0215-="">
+          <span>Walk for 0 steps</span>
+        </a>
+      </div>
+      <hr class="dark:border-gray-800"/>
+      <div class="-mt-px flex divide-x divide-gray-200 dark:divide-gray-800">
+        <div class="w-0 flex-1 flex">
+          <a href="/horse-and-carriage/travel/1" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+            <span >Travel for <img src="/img/icons/I_GoldCoin.png" class="h-4 inline-block"> 6,000 </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200 dark:divide-gray-800">
+    <img class="w-full h-auto flex-shrink-0 mx-auto bg-black" src="/img/bg/17.png" alt="Holbeck">
+    <div class="flex-1 flex flex-col p-4">
+      <h3 class="mt-6 text-gray-900 text-sm font-medium"> Holbeck</h3>
+      <dl class="mt-1 flex-grow flex flex-col">
+        <dd class="text-gray-500 text-sm">Level 5</dd>
+        <div class="my-4">
+          <button type="button" x-on:click="showInfo=true;name='Holbeck';modifiers.item=10;modifiers.npc=7;modifiers.material=23;modifiers.travelText=100 - (modifiers.item + modifiers.npc + modifiers.material);materials.fish.chance=25;materials.ore.chance=25;materials.treasure.chance=25;materials.trees.chance=25;" class="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            View Stats
+          </button>
+        </div>
+        <div class="mt-3 text-gray-500 text-sm">
+            The place where the sun always shines. Night time is an oddity here.
+        </div>
+
+
+      </dl>
+    </div>
+    <div>
+      <div class="w-full">
+        <a href="javascript:;" onclick="if (!window.__cfRLUnblockHandlers) return false; postPopup('Walk to Holbeck','Are you sure that you want to walk here? It will take you 5 steps to arrive.','/api/horse-and-carriage/2/steps', 'Yes');" class="relative -mr-px w-full flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500" data-cf-modified-beb284c4df4c25cfdaef0215-="">
+          <span>Walk for 5 steps</span>
+        </a>
+      </div>
+      <hr class="dark:border-gray-800"/>
+      <div class="-mt-px flex divide-x divide-gray-200 dark:divide-gray-800">
+        <div class="w-0 flex-1 flex">
+          <a href="/horse-and-carriage/travel/2" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+            <span >Travel for <img src="/img/icons/I_GoldCoin.png" class="h-4 inline-block"> 8,000 </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200 dark:divide-gray-800">
+    <img class="w-full h-auto flex-shrink-0 mx-auto bg-black" src="/img/bg/16.png" alt="Davenport">
+    <div class="flex-1 flex flex-col p-4">
+      <h3 class="mt-6 text-gray-900 text-sm font-medium"> Davenport</h3>
+      <dl class="mt-1 flex-grow flex flex-col">
+        <dd class="text-gray-500 text-sm">Level 10</dd>
+        <div class="my-4">
+          <button type="button" x-on:click="showInfo=true;name='Davenport';modifiers.item=11;modifiers.npc=5;modifiers.material=14;modifiers.travelText=100 - (modifiers.item + modifiers.npc + modifiers.material);materials.fish.chance=25;materials.ore.chance=25;materials.treasure.chance=25;materials.trees.chance=25;" class="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            View Stats
+          </button>
+        </div>
+        <div class="mt-3 text-gray-500 text-sm">
+            A land of traders. Come here if your wish is to trade and encounter strange people and wonderful items.
+        </div>
+
+
+      </dl>
+    </div>
+    <div>
+      <div class="w-full">
+        <a href="javascript:;" onclick="if (!window.__cfRLUnblockHandlers) return false; postPopup('Walk to Davenport','Are you sure that you want to walk here? It will take you 10 steps to arrive.','/api/horse-and-carriage/3/steps', 'Yes');" class="relative -mr-px w-full flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500" data-cf-modified-beb284c4df4c25cfdaef0215-="">
+          <span>Walk for 10 steps</span>
+        </a>
+      </div>
+      <hr class="dark:border-gray-800"/>
+      <div class="-mt-px flex divide-x divide-gray-200 dark:divide-gray-800">
+        <div class="w-0 flex-1 flex">
+          <a href="/horse-and-carriage/travel/3" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+            <span >Travel for <img src="/img/icons/I_GoldCoin.png" class="h-4 inline-block"> 10,000 </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</div>
+
+
+          <footer class="bg-white dark:bg-gray-950 mt-64" aria-labelledby="footerHeading">
+    <h2 id="footerHeading" class="sr-only">Footer</h2>
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div class="space-y-8 xl:col-span-1">
+            <picture>
+                <source srcset="https://www.galahadcreative.com/imgs/logo-horiz.webp" type="image/webp" class="h-20" alt="Galahad Creative Logo">
+                <source srcset="https://www.galahadcreative.com/imgs/logo-horiz.png" type="image/png" class="h-20" alt="Galahad Creative Logo">
+                <img src="https://www.galahadcreative.com/logo-horiz.png" class="h-20" alt="Galahad Creative Logo">
+            </picture>
+          <p class="text-gray-500 text-xs md:text-base  dark:text-gray-400">
+            Providing deep and extensive digital products under the veneer of an effortless user experience.
+          </p>
+          <div class="flex space-x-6">
+            <a href="https://www.facebook.com/simplemmo" class="text-gray-400 hover:text-gray-500  dark:text-gray-400 dark:hover:text-gray-500" target="_blank" rel="noreferrer nofollow">
+              <span class="sr-only">Facebook</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+              </svg>
+            </a>
+
+            <a href="https://www.instagram.com/simplemmo" class="text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" target="_blank" rel="noreferrer nofollow">
+              <span class="sr-only">Instagram</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+              </svg>
+            </a>
+
+            <a href="https://www.twitter.com/simplemmo" class="text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" target="_blank" rel="noreferrer nofollow">
+              <span class="sr-only">Twitter</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+
+            <a href="https://discord.com/invite/SEQxubs" class="text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" target="_blank" rel="noreferrer nofollow">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"  viewBox="0 0 24 24"  class="text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+            </a>
+
+          </div>
+        </div>
+        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase  dark:text-gray-100">
+                Game
+              </h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a href="/diamondstore" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Diamond Store
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/diamondstore/membership" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Membership
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/diamond-market" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Diamond Market
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/me" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Your Profile
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0">
+              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase dark:text-gray-100">
+                Support
+              </h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a href="/faqs" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    FAQs
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/discussionboards/menu" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Discussion Boards
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/support" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Support Ticket
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/discussionboards/category/bugs" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Report a Bug
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase dark:text-gray-100">
+                More
+              </h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a href="/about" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    About SimpleMMO
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/p-api/home" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Public API
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/diamondstore/membership/portal" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Payment Portal
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/updates" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Game Updates
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0">
+              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase dark:text-gray-100">
+                Legal
+              </h3>
+              <ul class="mt-4 space-y-4">
+                <li>
+                  <a href="/privacy" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Privacy Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/privacy" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Cookie Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/terms" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Terms and Conditions
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/gamerules" class="text-xs md:text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500">
+                    Game Rules
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-200 pt-8">
+        <p class="text-xs md:text-base text-gray-400 xl:text-center">
+          &copy; 2023 Galahad Creative Ltd,. All rights reserved.
+        </p>
+        <p class="text-xs md:text-base text-gray-300 text-center">
+            Galahad Creative Ltd. is a limited company registered in England and Wales. Registered number: 12871929. Registered office: Galahad Creative, International House, 24 Holborn Viaduct, London, EC1A 2BN
+        </p>
+      </div>
+    </div>
+  </footer>        </div>
+
+        <div
+        x-data="{chat:false,chatSrc:'about:blank;'}"
+        x-init="chat = docCookies.hasItem('show_chat') ? (docCookies.getItem('show_chat') == 'true') : false;if (chat){chatSrc='/chat/public?web_app=true&api_token=FQSjN8aIWm4Pj9QIjCKfEzRyuqC0DWV07fxe6EEasQSLmPN18KClAJ2LQ3Px';}else{chatSrc='about:blank;'}"
+        >
+
+
+
+        <button type="button"
+        id="show_hide_chat_btn"
+        x-on:click="chat=!chat;docCookies.setItem('show_chat', chat, (7*24*60*60), '/');if (chat){chatSrc='/chat/public?web_app=true&api_token=FQSjN8aIWm4Pj9QIjCKfEzRyuqC0DWV07fxe6EEasQSLmPN18KClAJ2LQ3Px';}else{chatSrc='about:blank;'}"
+          style="z-index:999"
+          class="fixed right-0 bottom-0 mb-2 mr-2 sm:mb-8 sm:mr-8 inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-xs sm:text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span x-show="!chat;" class="mr-1"> Show</span> <span x-show="chat" class="mr-1">Hide</span> Chat
+        </button>
+
+        <div class="rounded-md z-10 fixed p-4 right-0 bottom-0 mr-0 mb-8 mt-4 md:mt-0 md:mr-4 md:mb-16 rounded-lg w-screen h-screen md:w-96 md:h-4/6" id="chatBox" style="display:none;" x-show="chat">
+
+            <iframe src="about:blank;" :src="chatSrc" title="SimpleMMO Chat" class="rounded-lg h-full w-full shadow dark:border dark:border-gray-800" allow-scripts></iframe>
+
+        </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+
+  <script src="/js/sweet-alert-8.js" type="beb284c4df4c25cfdaef0215-text/javascript"></script>
+  <script src="/js/smmo/all.js?v=1.29"  data-cfasync="false"></script>
+  <script src="/js/smmo/webapp.js?v=1.11" type="beb284c4df4c25cfdaef0215-text/javascript"></script>
+  <div id="item-popup"
+x-data="{showItemPopup:false,'item':{'id':null, 'current_stats':'Loading...', 'equipable':null,
+'collectable_collection': false,
+'item_collection': false,
+'avatar_collection': false,
+'sprite_collection': false,
+'background_collection': false,
+'custom_item': false,
+'currently_equipped': null, 'image':null, 'name':'Loading...', 'stats': null, 'description':null, 'type': 'Loading...', 'value': '', 'rarity': '', 'level':1, 'circulation': null, 'yours': null, 'market_value': null, 'additional_data': null}}">
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="fixed z-10 inset-0 overflow-y-auto z-30" aria-labelledby="modal-title" role="dialog" aria-modal="true" x-show="showItemPopup" style="display:none;">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+      x-transition:enter="transition ease-in-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in-out duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+      x-show="showItemPopup"
+      x-on:click="showItemPopup=false; resetData(); show_bottom_bar(); enable_pull_to_refresh();"
+      aria-hidden="true"></div>
+
+      <!-- This element is to trick the browser into centering the modal contents. -->
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+      <div
+      x-show="showItemPopup"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave="ease-in duration-200"
+      x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl w-full sm:p-6">
+        <div>
+          <div class="mx-auto flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800"  :class="{ 'w-full' : (item.type == 'Background'), 'w-12 h-12' : (item.type != 'Background') }">
+            <img src=""  :src="item.image">
+          </div>
+          <div class="mt-3 text-center sm:mt-5">
+            <h3 class="text-lg sm:text-xl leading-6 font-medium text-gray-900" x-text="item.name">
+            </h3>
+            <div class="mt-1 text-xs sm:text-sm">
+                <span x-text="item.rarity" :class="item.rarity.toLowerCase()+'-item'">
+            </div>
+            <div class="mt-1 text-xs sm:text-sm">
+                <span class="text-gray-900 dark:text-gray-300" x-html="item.stats"></span>
+            </div>
+            <div class="mt-1 text-xs sm:text-sm">
+
+                <span x-text="item.current_stats" class="text-gray-400 dark:text-gray-400"></span>
+            </div>
+            <div class="mt-2 bg-gray-100 rounded-lg px-3 py-2"  x-show="if (item.description && item.description.length !== 0) return item.description; return false;">
+              <p class="text-xs sm:text-sm text-gray-500">
+                <span x-html="item.description"></span>
+              </p>
+            </div>
+            <div class="text-xs text-gray-400 mt-1" x-show="item.custom_item">
+                This is a custom item
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+            <dl class="mt-5 grid grid-cols-3 gap-3">
+              <div class="px-1 py-3 bg-white rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">
+                  Type
+                </dt>
+                <dd class="mt-1 text-sm sm:text-base font-semibold text-gray-900">
+                  <span x-text="item.type"></span>
+                </dd>
+              </div>
+
+              <div class="px-1 py-3 bg-white rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">
+                  Value
+                </dt>
+                <dd class="mt-1 text-sm sm:text-base font-semibold text-gray-900 whitespace-nowrap">
+                  <img src="/img/icons/I_GoldCoin.png" class="h-4"> <span x-text="item.value"></span>
+                </dd>
+              </div>
+
+              <div class="px-1 py-3 bg-white rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">
+                    Collection
+                </dt>
+                <dd class="mt-1 text-sm sm:text-base font-semibold text-gray-900">
+                    <span x-show="item.type == 'Food'" class='font-normal text-gray-600 text-xs bg-gray-200 px-2 py-1.5 rounded-lg'>
+                      Not collectable
+                    </span>
+                    <div class="text-center" x-show="item.type != 'Food'">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" x-show="item.collectable_collection || item.item_collection || item.sprite_collection || item.background_collection || item.avatar_collection">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
+                        <span class="sr-only" x-show="item.collectable_collection || item.item_collection || item.sprite_collection || item.background_collection || item.avatar_collection">Collected</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"  x-show="!item.collectable_collection && !item.item_collection && !item.sprite_collection && !item.background_collection && !item.avatar_collection">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="sr-only" x-show="!item.collectable_collection && !item.item_collection && !item.sprite_collection && !item.background_collection && !item.avatar_collection">Not Collected</span>
+                    </div>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="text-center">
+            <dl class="grid grid-cols-3 gap-3">
+              <div class="px-1 py-3 bg-white rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">
+                  Level
+                </dt>
+                <dd class="mt-1 text-sm sm:text-md font-semibold text-gray-900 truncate">
+                    <span x-text="item.level"></span>
+                </dd>
+              </div>
+
+              <div class="px-1 py-3 bg-white rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">
+                    Circulation
+                </dt>
+                <dd class="mt-1 text-sm sm:text-base font-semibold text-gray-900 truncate">
+                    <span x-text="item.circulation"></span>
+                </dd>
+              </div>
+
+              <div class="px-1 py-3 bg-white rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">
+                    Yours
+                </dt>
+                <dd class="mt-1 text-sm sm:text-base font-semibold text-gray-900">
+                    <span x-text="item.yours"></span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="text-center">
+            <dl class="grid grid-cols-1 gap-3">
+              <div class="px-1 py-3 bg-white shadow-sm rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">
+                  Market Value
+                </dt>
+                <dd class="mt-1 text-sm sm:text-base font-semibold text-gray-900 truncate">
+                    <img src="/img/icons/I_GoldCoin.png" class="h-4"> <span x-text="item.market"></span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+
+        <div class="mt-5" x-data="{collect_confirmation:false}">
+
+        <div class="text-center text-xs sm:text-sm" x-show="collect_confirmation">
+          <div>Are you sure? This will collect <strong>all</strong> of this items in your inventory.<br/>
+            <div class="text-gray-500 mt-2">If you wish to only collect a few, please do so via the inventory page.</div>
+          </div>
+          <div class="mt-2">
+            <button type="button"
+            x-on:click="
+                    fetch('/inventory/use/collectable/'+item.id+'?api=true&quantity='+item.yours,{
+                        method: 'GET',
+                    })
+                    .then(function(){
+                        item.yours = 0;
+                        item.item_collection = true;
+                    });
+                    collect_confirmation = false;
+            "
+            class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Collect All Items
+            </button>
+            <button type="button"
+            x-on:click="collect_confirmation=false;"
+            class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Cancel
+            </button>
+          </div>
+        </div>
+        <div x-show="!collect_confirmation">
+          <div class="flex flex-wrap justify-center gap-2 my-4">
+
+            <a :href="'/item/inspect/'+item.id+'?new_page=true'"  target="_top">
+              <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Inspect
+              </button>
+            </a>
+
+            <a :href="'/library/read/'+item.additional_data+'?new_page=true'"  target="_top">
+            <button type="button"
+            x-show="item.type == 'Book'"
+            class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Read Book
+            </button>
+            </a>
+
+            <button type="button"
+            x-on:click="collect_confirmation=true;"
+            x-show="item.yours && item.type == 'Collectable'"
+            class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Collect Item
+            </button>
+
+            <button type="button"
+            style="display:none;"
+            x-show="item.equipable && item.yours && !item.currently_equipped && item.level <= 27"
+            x-on:click="
+                    fetch('/inventory/equip/'+item.id+'?api=true',{
+                        method: 'GET',
+                    })
+                    .then(function(){
+                        item.currently_equipped = true;
+                    });
+            "
+            class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Equip Item
+            </button>
+
+            <button type="button"
+            style="display:none"
+            x-show="item.equipable && item.yours && item.currently_equipped"
+            class="opacity-40 inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Equipped
+            </button>
+
+            <button type="button"
+            style="display:none"
+            x-show="item.equipable && item.yours && item.level > 27"
+            class="opacity-40 inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Level Too High To Equip
+            </button>
+
+
+            <a :href="'/market/listings?item_id='+item.id+'&new_page=true'" target="_top">
+              <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                View on Market
+              </button>
+            </a>
+            <a :href="'javascript:addToWishlist(\''+item.id+'\',\''+btoa(item.name)+'\',\''+item.image+'\');'">
+              <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Add to Wishlist
+              </button>
+            </a>
+            <a :href="'javascript:quickSell(\''+item.id+'\','+item.value.replace(/\,/g,'')+',\''+btoa(item.name)+'\');'" x-show="item.yours">
+              <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs sm:text-sm font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Quick Sell
+              </button>
+            </a>
+
+          </div>
+        </div>
+
+            <div class="text-xs sm:text-sm text-indigo-600 hover:text-indigo-700 mt-2 sm:mt-4 text-center" x-show="item.type == 'Avatar' || item.type == 'Background'">
+                <a :href="'/user/view/962786?preview='+item.id"  target="_top">Press here to preview it on your profile</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="beb284c4df4c25cfdaef0215-text/javascript">
+    function retrieveItem(id,tempid, link, linkText){
+
+        resetData();
+        hide_bottom_bar();
+        disable_pull_to_refresh();
+
+        if (typeof tempid === 'undefined') { tempid = false; }
+
+        if (tempid && document.getElementById('item-id-'+tempid))
+            document.getElementById('item-id-'+tempid).insertAdjacentHTML("beforeend", "<i class='fa fa-spinner fa-spin fa-fw' id='loading-icon-"+tempid+"'></i>");
+
+        if (typeof link === 'undefined') { link = false; }
+
+        if (typeof linkText === 'undefined') { linkText = false; }
+
+        document.getElementById('item-popup')._x_dataStack[0].showItemPopup = true;
+
+        fetch("/api/item/stats/"+id,{
+                'method': 'POST'
+            })
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                document.getElementById('item-popup')._x_dataStack[0].item.id = data.id;
+                document.getElementById('item-popup')._x_dataStack[0].item.stats = data.stats_string;
+                document.getElementById('item-popup')._x_dataStack[0].item.name = atob(data.name);
+                document.getElementById('item-popup')._x_dataStack[0].item.image = data.image;
+                document.getElementById('item-popup')._x_dataStack[0].item.type = data.type;
+                document.getElementById('item-popup')._x_dataStack[0].item.description = data.description;
+                document.getElementById('item-popup')._x_dataStack[0].item.equipable = data.equipable;
+                document.getElementById('item-popup')._x_dataStack[0].item.currently_equipped = data.currently_equipped;
+                document.getElementById('item-popup')._x_dataStack[0].item.value = data.value;
+                document.getElementById('item-popup')._x_dataStack[0].item.rarity = data.rarity;
+                document.getElementById('item-popup')._x_dataStack[0].item.level = data.level;
+                document.getElementById('item-popup')._x_dataStack[0].item.circulation = data.circulation;
+                document.getElementById('item-popup')._x_dataStack[0].item.yours = data.quantity;
+                document.getElementById('item-popup')._x_dataStack[0].item.market = data.market;
+                document.getElementById('item-popup')._x_dataStack[0].item.current_stats = data.currently_equipped_string;
+                document.getElementById('item-popup')._x_dataStack[0].item.item_collection = data.item_collection;
+                document.getElementById('item-popup')._x_dataStack[0].item.collectable_collection = data.collectable_collection;
+                document.getElementById('item-popup')._x_dataStack[0].item.sprite_collection = data.sprite_collection;
+                document.getElementById('item-popup')._x_dataStack[0].item.background_collection = data.background_collection;
+                document.getElementById('item-popup')._x_dataStack[0].item.avatar_collection = data.avatar_collection;
+                document.getElementById('item-popup')._x_dataStack[0].item.custom_item = data.custom_item;
+                document.getElementById('item-popup')._x_dataStack[0].item.additional_data = data.additional_data;
+
+
+
+
+                if (tempid)
+                    document.getElementById("loading-icon-"+tempid).remove();
+
+            });
+
+    }
+
+    function resetData(){
+
+            document.getElementById('item-popup')._x_dataStack[0].item.id = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.stats = "Loading...";
+            document.getElementById('item-popup')._x_dataStack[0].item.name = "Loading...";
+            document.getElementById('item-popup')._x_dataStack[0].item.image = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.type = "Loading...";
+            document.getElementById('item-popup')._x_dataStack[0].item.description = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.equipable = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.currently_equipped = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.value = "Loading...";
+            document.getElementById('item-popup')._x_dataStack[0].item.rarity = "";
+            document.getElementById('item-popup')._x_dataStack[0].item.level = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.circulation = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.yours = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.market = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.current_stats = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.item_collection = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.collectable_collection = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.sprite_collection = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.background_collection = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.avatar_collection = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.custom_item = null;
+            document.getElementById('item-popup')._x_dataStack[0].item.additional_data = null;
+
+    }
+</script>
+
+<script type="beb284c4df4c25cfdaef0215-text/javascript">
+    function checkSA(item, index){
+            if (localStorage.hasOwnProperty(item)){
+                saveData("Has "+item);
+                localStorage.removeItem(item);
+            }
+      }
+
+      window.addEventListener("load", function(){
+
+        setTimeout(function(){
+            var ele = document.getElementById("show_hide_chat_btn") || false;
+            if (!ele)
+                saveData("n-c | "+navigator.userAgent);
+        }, 1000);
+
+          if (navigator.webdriver)
+			      saveData("PUA-FJF£");
+          var _0x20f8=['SA_Quests','SA_Job_temp','SA_Travel','SA_Arena','removeItem', 'SA_Quests_but-a-band-aid', 'SA_Job_but-a-band-aid', 'SA_Job_temp_but-a-band-aid','SA_Travel_but-a-band-aid','SA_Arena_but-a-band-aid', 'removeItem_but-a-band-aid'];
+          _0x20f8.forEach(checkSA);
+
+      });
+
+</script>
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="beb284c4df4c25cfdaef0215-|49" defer=""></script></body>
+</html>
