@@ -5,8 +5,9 @@ import actions, time, solve_captcha, re, threading, travel_auxiliary
 def start(session, csrf, api_token):
     print("started looping travel steps")
     i = 0
-    threading.Thread(target=travel_auxiliary.start_autosell, args=(session, csrf,))
-    threading.Thread(target=actions.travel_sprint_loop, args=(session,))
+    threading.Thread(target=travel_auxiliary.start_autosell, args=(session, csrf,)).start()
+    threading.Thread(target=actions.travel_sprint_loop, args=(session,)).start()
+    threading.Thread(target=actions.switch_best_town_loop, args=(session, csrf,)).start()
     while True:
         step = actions.travel(session, csrf, api_token)
         i += 1

@@ -182,7 +182,7 @@ def enum_inventory(s):
 def quicksell_items(s, csrf, items_dict_list):
     for item in items_dict_list:
         sale = (s.post(f"https://web.simple-mmo.com/api/quicksell/{str(item['id'])}/quantity", body={
-            "token": csrf, "data": str(item["quantity"])
+            "_token": csrf, "data": str(item["quantity"])
         }).content).decode("utf-8")
 
         print(sale)
@@ -198,6 +198,20 @@ def travel_sprint_loop(s):
         })
         print("sprinted travel")
         time.sleep(300)
+
+
+def switch_best_town_loop(s, csrf):
+    time.sleep(1200)
+    while True:
+
+        available_towns = re.findall("Walk for", (s.get("https://web.simple-mmo.com/horse-and-carriage").content).decode("utf-8"))
+        switch = s.post(f"https://web.simple-mmo.com/api/horse-and-carriage/{str(len(available_towns))}/steps", json={
+            "_token": csrf, "data": True
+
+        })
+        print((switch.content).decode("utf-8"))
+        time.sleep(1200)
+
 
 
 
